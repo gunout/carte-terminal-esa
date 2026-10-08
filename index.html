@@ -8,26 +8,18 @@
 
 <style>
 /* ============================================================
-   POLICE NASALIZATION — style NASA
+   POLICE NASALIZATION — fichier local fonts/nasalisation.ttf
    ============================================================ */
 @font-face {
     font-family: 'Nasalization';
-    src: url('fonts/Nasalization-Rg.otf') format('opentype'),
-         url('https://cdn.jsdelivr.net/gh/justfont/nasalization@main/Nasalization-Rg.otf') format('opentype');
+    src: url('fonts/nasalisation.ttf') format('truetype');
     font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Nasalization';
-    src: url('fonts/Nasalization-Bd.otf') format('opentype');
-    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 /* ============================================================
-   BASE — identique à l'encyclopédie
+   BASE
    ============================================================ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -149,7 +141,7 @@ body {
 .main-container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
 /* ============================================================
-   SECTION CARTE (remplace search-section)
+   SECTION PRINCIPALE
    ============================================================ */
 .search-section {
     background: #ffffff; padding: 18px 20px; border-radius: 16px;
@@ -230,7 +222,7 @@ body {
 .legend  { color: #000091; font-weight: 700; }
 
 /* ============================================================
-   TÉLÉMESURES (comme les stat-cards de l'encyclopédie)
+   TÉLÉMESURES (stat-cards)
    ============================================================ */
 .stats-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -270,7 +262,7 @@ body {
 .section-title .emoji { margin-right: 8px; }
 
 /* ============================================================
-   BOUTONS (comme les quick-buttons de l'encyclopédie)
+   BOUTONS
    ============================================================ */
 #controls {
     display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px;
@@ -311,7 +303,7 @@ button.btn-clear:hover { background: #ffe9e9; }
 }
 
 /* ============================================================
-   FOOTER OFFICIEL (identique encyclopédie)
+   FOOTER OFFICIEL
    ============================================================ */
 .footer-officiel {
     background: #fff; border-top: 2px solid #000091;
@@ -338,19 +330,6 @@ button.btn-clear:hover { background: #ffe9e9; }
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
-/* ============================================================
-   TOAST
-   ============================================================ */
-.toast {
-    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
-    background: #000091; color: #fff; padding: 10px 20px;
-    border-radius: 10px; border: 1px solid #000091;
-    font-family: monospace; font-size: 13px;
-    opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 100;
-    box-shadow: 0 8px 24px rgba(0,0,145,.25);
-}
-.toast.show { opacity: 1; }
 
 /* ============================================================
    RESPONSIVE
@@ -451,8 +430,6 @@ button.btn-clear:hover { background: #ffe9e9; }
     © <span id="copyrightYear">2025</span> · <span class="sig">CELLULE ORBITALE</span> · gunout · Tous droits réservés
   </div>
 </footer>
-
-<div class="toast" id="toast"></div>
 
 <script>
 'use strict';
