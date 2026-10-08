@@ -11,6 +11,10 @@
 
 ---
 
+<img width="1138" height="704" alt="ESA_MAP" src="https://github.com/user-attachments/assets/b540a09e-19eb-406c-94dd-98622a5e13e2" />
+
+---
+
 ## 📖 Description
 
 Un script Python qui affiche une **carte du monde en ASCII** directement dans votre terminal, accompagnée du logo de l'**Agence spatiale européenne (ESA)**.
